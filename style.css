@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+    color: black;
+}
+
+header {
+    background-color: #79a9ba;
+}
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Style navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #79a9ba;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        background-color: #79a9ba;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggler.active .navbar-toggler-icon {
+        transform: rotate(90deg);
+    }
+}
+
+.nav-links li a.active {
+    background-color: black;
+}
+
+
+
+/* Style home */
+article .home {
+    display: flex;
+
+}
+
+article .home .col1 {
+    text-align: center;
+    justify-content: center;
+    flex-basis: 300px;
+}
+
+article .home img {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    article .home img {
+        max-width: 500px;
+        width: auto;
+    }
+}
+
+article .home .col2 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+svg {
+    margin-bottom: -5px;
+}
+
+.bio {
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #a0cbda, white 50%);
+    text-align: justify;
+}
+
+table {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table tr td img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.fakta {
+    background-image: linear-gradient(to bottom, white 10%, #a0cbda 90%);
+    padding: 20px;
+    text-align: justify;
+}
+
+footer {
+    background: #79a9ba;
+    padding: 5px;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Flexbox Layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ukuran untuk aside dan article */
+article {
+    flex: 2 1 400px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #79a9ba;
+}
+.contact {
+    text-align: center;
+    align-self: flex-end; /* Konten berada di tengah bawah */
+    padding: 20px; 
+}
+.top-section {
+    flex: 1 1 auto; /* Bagian atas fleksibel tetapi dengan panjang yang tetap */
+}
+
+aside .contact img {
+    border-radius: 50%;
+    border: 5px solid #a0cbda;
+    max-width: 100%;
+    height: 100px;
+}
+
+@media (max-width: 600px) {
+
+    nav,
+    article,
+    aside {
+        flex: 1 1 100%;
+        /* Semua elemen akan mengambil 100% lebar pada layar kecil */
+    }
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+li {
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
